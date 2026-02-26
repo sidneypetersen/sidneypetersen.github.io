@@ -1,1 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sidney Petersen | Photography & Creative</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #f8f6f1, #e8dff5, #fce1e4);
+      color: #111;
+      overflow-x: hidden;
+    }
+
+    /* NAVIGATION */
+    nav {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      background: rgba(255,255,255,0.6);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 50px;
+      z-index: 1000;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #111;
+      font-weight: 600;
+      margin-left: 20px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #7a5cff;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 120px 10%;
+      position: relative;
+      text-align: center;
+    }
+
+    .hero img {
+      max-width: 450px;
+      width: 90%;
+      border-radius: 20px;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+      transition: 0.4s;
+    }
+
+    .hero img:hover {
+      transform: scale(1.03);
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem;
+      margin-top: 30px;
+      cursor: pointer;
+    }
+
+    .hero h2 {
+      font-weight: 300;
+      letter-spacing: 3px;
+      margin-top: 10px;
+    }
+
+    /* ABOUT SECTION */
+    #about {
+      padding: 120px 15%;
+      background: #ffffffcc;
+      backdrop-filter: blur(10px);
+      text-align: center;
+    }
+
+    #about h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    #about p {
+      max-width: 700px;
+      margin: auto;
+      line-height: 1.6;
+      font-size: 1.1rem;
+    }
+
+    /* PROJECT FOLDERS */
+    #projects {
+      padding: 120px 10%;
+      text-align: center;
+    }
+
+    #projects h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      margin-bottom: 60px;
+    }
+
+    .folder-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+    }
+
+    .folder {
+      background: white;
+      border-radius: 20px;
+      padding: 50px 20px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      transition: 0.3s;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .folder:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 30px 60px rgba(0,0,0,0.2);
+    }
+
+    .folder::before {
+      content: "";
+      position: absolute;
+      top: -15px;
+      left: 20px;
+      width: 60px;
+      height: 30px;
+      background: #7a5cff;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .folder h3 {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      letter-spacing: 1px;
+    }
+
+    footer {
+      padding: 40px;
+      text-align: center;
+      font-size: 0.9rem;
+      background: #111;
+      color: white;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div><strong>Sidney Petersen</strong></div>
+    <div>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div>
+      <a href="#about">
+        <img src="featured-photo.jpg" alt="Featured Photography">
+      </a>
+      <h1 onclick="location.href='#about'">Sidney Petersen</h1>
+      <h2>Photography • Creative Direction • Visual Storytelling</h2>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am a photographer and creative exploring storytelling through visual identity,
+      texture, movement, and emotion. My work blends maximalist aesthetics with intentional
+      design — capturing bold color, layered narratives, and striking compositions.
+      Currently focused on creative direction and marketing-driven visual storytelling.
+    </p>
+  </section>
+
+  <!-- PROJECT FOLDERS -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="folder-container">
+
+      <div class="folder" onclick="location.href='fashion.html'">
+        <h3>Fashion Editorial</h3>
+      </div>
+
+      <div class="folder" onclick="location.href='portrait.html'">
+        <h3>Portrait Series</h3>
+      </div>
+
+      <div class="folder" onclick="location.href='branding.html'">
+        <h3>Branding & Campaign</h3>
+      </div>
+
+      <div class="folder" onclick="location.href='experimental.html'">
+        <h3>Experimental Projects</h3>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Sidney Petersen — All Rights Reserved
+  </footer>
+
+</body>
+</html>
