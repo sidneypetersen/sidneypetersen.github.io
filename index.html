@@ -5,7 +5,6 @@
   <title>Sidney Petersen | Photography & Creative</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
@@ -18,9 +17,23 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(135deg, #f8f6f1, #e8dff5, #fce1e4);
-      color: #111;
+      color: white;
       overflow-x: hidden;
+    }
+
+    /* HERO WITH BACKGROUND IMAGE */
+    .hero {
+      height: 100vh;
+      background: 
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        url("images/Lily7 copy.jpg") center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 10%;
+      position: relative;
     }
 
     /* NAVIGATION */
@@ -28,67 +41,54 @@
       position: fixed;
       width: 100%;
       top: 0;
-      background: rgba(255,255,255,0.6);
-      backdrop-filter: blur(10px);
       display: flex;
       justify-content: space-between;
-      padding: 20px 50px;
+      padding: 25px 60px;
       z-index: 1000;
+      background: rgba(0,0,0,0.3);
+      backdrop-filter: blur(8px);
     }
 
     nav a {
       text-decoration: none;
-      color: #111;
+      color: white;
       font-weight: 600;
-      margin-left: 20px;
+      margin-left: 25px;
       transition: 0.3s;
     }
 
     nav a:hover {
-      color: #7a5cff;
+      color: #f8d7ff;
     }
 
-    /* HERO SECTION */
-    .hero {
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 120px 10%;
-      position: relative;
-      text-align: center;
+    nav strong {
+      letter-spacing: 1px;
     }
 
-    .hero img {
-      max-width: 450px;
-      width: 90%;
-      border-radius: 20px;
-      box-shadow: 0 30px 60px rgba(0,0,0,0.15);
-      transition: 0.4s;
-    }
-
-    .hero img:hover {
-      transform: scale(1.03);
-    }
-
+    /* HERO TEXT */
     .hero h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 4rem;
-      margin-top: 30px;
+      font-size: 5rem;
       cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .hero h1:hover {
+      transform: scale(1.05);
     }
 
     .hero h2 {
+      margin-top: 20px;
       font-weight: 300;
-      letter-spacing: 3px;
-      margin-top: 10px;
+      letter-spacing: 4px;
+      font-size: 1.1rem;
     }
 
     /* ABOUT SECTION */
     #about {
       padding: 120px 15%;
-      background: #ffffffcc;
-      backdrop-filter: blur(10px);
+      background: white;
+      color: #111;
       text-align: center;
     }
 
@@ -101,13 +101,14 @@
     #about p {
       max-width: 700px;
       margin: auto;
-      line-height: 1.6;
+      line-height: 1.7;
       font-size: 1.1rem;
     }
 
     /* PROJECT FOLDERS */
     #projects {
       padding: 120px 10%;
+      background: #f6f2ff;
       text-align: center;
     }
 
@@ -126,7 +127,7 @@
     .folder {
       background: white;
       border-radius: 20px;
-      padding: 50px 20px;
+      padding: 60px 20px;
       box-shadow: 0 20px 40px rgba(0,0,0,0.1);
       transition: 0.3s;
       cursor: pointer;
@@ -134,7 +135,7 @@
     }
 
     .folder:hover {
-      transform: translateY(-10px);
+      transform: translateY(-12px);
       box-shadow: 0 30px 60px rgba(0,0,0,0.2);
     }
 
@@ -142,15 +143,15 @@
       content: "";
       position: absolute;
       top: -15px;
-      left: 20px;
-      width: 60px;
+      left: 25px;
+      width: 70px;
       height: 30px;
       background: #7a5cff;
-      border-radius: 10px 10px 0 0;
+      border-radius: 12px 12px 0 0;
     }
 
     .folder h3 {
-      margin-top: 20px;
+      margin-top: 25px;
       font-size: 1.2rem;
       letter-spacing: 1px;
     }
@@ -168,7 +169,6 @@
 
 <body>
 
-  <!-- NAVIGATION -->
   <nav>
     <div><strong>Sidney Petersen</strong></div>
     <div>
@@ -180,13 +180,8 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div>
-      <a href="#about">
-        <img src="featured-photo.jpg" alt="Featured Photography">
-      </a>
       <h1 onclick="location.href='#about'">Sidney Petersen</h1>
       <h2>Photography • Creative Direction • Visual Storytelling</h2>
-    </div>
   </section>
 
   <!-- ABOUT -->
@@ -196,11 +191,10 @@
       I am a photographer and creative exploring storytelling through visual identity,
       texture, movement, and emotion. My work blends maximalist aesthetics with intentional
       design — capturing bold color, layered narratives, and striking compositions.
-      Currently focused on creative direction and marketing-driven visual storytelling.
     </p>
   </section>
 
-  <!-- PROJECT FOLDERS -->
+  <!-- PROJECTS -->
   <section id="projects">
     <h2>Projects</h2>
     <div class="folder-container">
